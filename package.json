@@ -7,6 +7,7 @@
     "lint": "eslint .",
     "login": "firebase login",
     "login.reauth": "firebase login --reauth",
+    "fb.use": "firebase use --add",
     "clean": "rm -rf dist",
     "copy": "cpx '*{package.json,yarn.lock}' dist",
     "prebuild": "yarn clean",
