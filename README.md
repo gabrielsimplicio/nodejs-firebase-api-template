@@ -9,13 +9,13 @@ In this sample project, there is a CRUD of `People`.
 - clone this repo
 - run `yarn`
 
-Firebase
+## Firebase
 
 - create a new firebase project into [Firebase Console]("https://console.firebase.google.com")
 - Navigate into `Database` menu, and activate firestore.
 - Initiate firestore in test mode
 
-Application
+## Application
 
 - run `yarn fb.use`
     1) Select the project that you just created.
@@ -23,7 +23,7 @@ Application
     3) You should see the new `.firebaserc` file.
 - run `yarn start`
 
-Endpoints
+## Endpoints
 
 - GET All: `http://localhost:5000/<MY-APP-ID>/us-central1/api/person`
 - GET by ID: `http://localhost:5000/<MY-APP-ID>/us-central1/api/person/<ID>`
@@ -31,7 +31,7 @@ Endpoints
 - PUT: `http://localhost:5000/<MY-APP-ID>/us-central1/api/person/<ID>`
 - DELETE: `http://localhost:5000/<MY-APP-ID>/us-central1/api/person/<ID>`
 
-Person object
+## Person object
 
 In POST method, you can use this object:
 
