@@ -17,16 +17,19 @@ Firebase
 
 Application
 
-- run `yarn fb.use`, to create a `.firebaserc` file. Select the project that you just created.
+- run `yarn fb.use`
+    1) Select the project that you just created.
+    2) Type `test` as alias for this project.
+    3) You should see the new `.firebaserc` file.
 - run `yarn start`
 
 Endpoints
 
-- GET All: "http://localhost:5000/<MY-APP-ID>/us-central1/api/person"
-- GET by ID: "http://localhost:5000/<MY-APP-ID>/us-central1/api/person/<ID>"
-- POST: "http://localhost:5000/<MY-APP-ID>/us-central1/api/person"
-- PUT: "http://localhost:5000/<MY-APP-ID>/us-central1/api/person/<ID>"
-- DELETE: "http://localhost:5000/<MY-APP-ID>/us-central1/api/person/<ID>"
+- GET All: `http://localhost:5000/<MY-APP-ID>/us-central1/api/person`
+- GET by ID: `http://localhost:5000/<MY-APP-ID>/us-central1/api/person/<ID>`
+- POST: `http://localhost:5000/<MY-APP-ID>/us-central1/api/person`
+- PUT: `http://localhost:5000/<MY-APP-ID>/us-central1/api/person/<ID>`
+- DELETE: `http://localhost:5000/<MY-APP-ID>/us-central1/api/person/<ID>`
 
 Person object
 
@@ -53,7 +56,12 @@ In POST method, you can use this object:
 }
 ```
 
-Test
+## Deploy
+
+- run `yarn deploy`
+- access `https://us-central1-<MY-APP-ID>.cloudfunctions.net/api/person`
+
+## Test
 
 This project uses jest.
 

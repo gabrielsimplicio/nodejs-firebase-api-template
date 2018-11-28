@@ -2,7 +2,6 @@
   "name": "nodejs-firebase-api-template",
   "version": "1.0.0",
   "description": "NodeJS + Firebase Backend API Sample Application",
-  "main": "src/index.js",
   "scripts": {
     "lint": "eslint .",
     "login": "firebase login",
