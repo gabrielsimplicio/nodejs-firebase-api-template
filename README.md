@@ -11,7 +11,7 @@ In this sample project, there is a CRUD of `People`.
 
 ## Firebase
 
-- create a new firebase project into [Firebase Console]("https://console.firebase.google.com")
+- create a new firebase project into [Firebase Console](https://console.firebase.google.com)
 - Navigate into `Database` menu, and activate firestore.
 - Initiate firestore in test mode
 
