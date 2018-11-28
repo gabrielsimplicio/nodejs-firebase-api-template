@@ -1,0 +1,55 @@
+{
+  "name": "nodejs-firebase-api-template",
+  "version": "1.0.0",
+  "description": "NodeJS + Firebase Backend API Sample Application",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "login": "firebase login",
+    "login.reauth": "firebase login --reauth",
+    "clean": "rm -rf dist",
+    "copy": "cpx '*{package.json,yarn.lock}' dist",
+    "prebuild": "yarn clean",
+    "build": "babel src --out-dir dist",
+    "postbuild": "yarn copy",
+    "serve": "yarn build && firebase serve --only functions",
+    "shell": "yarn build && firebase use test && firebase experimental:functions:shell",
+    "start": "firebase use test && nodemon --watch src --exec \"yarn serve\"",
+    "predeploy": "yarn build && firebase use test",
+    "deploy": "firebase deploy -P test --only functions",
+    "predeploy.prod": "yarn build && firebase use prod",
+    "deploy.prod": "firebase deploy -P prod --only functions",
+    "logs": "firebase functions:log",
+    "test": "jest --env=jsdom --watchAll --coverage --collectCoverageFrom=src/domain/**/*.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "firebase-admin": "~6.0.0",
+    "firebase-functions": "^2.0.3",
+    "moment": "^2.22.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "cpx": "^1.5.0",
+    "eslint": "^4.12.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.4",
+    "regenerator-runtime": "^0.12.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielsimplicio/nodejs-firebase-api-template.git"
+  },
+  "author": "Gabriel Simplicio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielsimplicio/nodejs-firebase-api-template/issues"
+  },
+  "homepage": "https://github.com/gabrielsimplicio/nodejs-firebase-api-template#readme"
+}
